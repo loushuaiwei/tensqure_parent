@@ -10,7 +10,7 @@ spring:
 eureka:
   client:
     service-url:  
-      defaultZone: http://192.168.66.103:10086/eureka,http://192.168.66.104:10086/eureka # Eureka访问地址
+      defaultZone: http://localhost:8081/eureka/
   instance:
     prefer-ip-address: true
   
@@ -37,8 +37,8 @@ zuul:
       path: /admin/**
       serviceId: tensquare-admin-service
     gathering:
-          path: /gathering/**
-          serviceId: tensquare-gathering
+      path: /gathering/**
+      serviceId: tensquare-gathering
 
  # jwt参数
 jwt:
